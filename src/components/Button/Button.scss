@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.button {
+  font-size: 24px;
+  font-family: 'Itim';
+  color: #FFF;
+  padding: 10px 70px;
+  outline: none;
+  background-color: #FF843F;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(0, 0, 0, 0.15), inset 3px 4px 5px rgba(255, 255, 255, 0.25);
+  border-radius: 43px;
+  border: none;
+  @include tablet {
+    font-size: $mediumFont;
+    padding: 8px 50px;
+  }
+}
+
+.button:active {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 3px rgba(255, 255, 255, 0.25);
+}
+
