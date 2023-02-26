@@ -6,7 +6,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    // justify-self: start;
     align-items: flex-start;
     & .input-label {
       padding: 10px 20px;
@@ -16,7 +15,6 @@
       }
     }
     & input {
-      // position: relative;
       width: 100%;
       color: #656565;
       border-radius: 30px;
@@ -33,6 +31,9 @@
         padding: 8px 15px;
       }
     }
+    & input:invalid {
+      color: rgb(235, 51, 51);
+    }
     & input::placeholder {
       color:#cfcfcf;
     }
@@ -45,67 +46,6 @@
       @include tablet {
         bottom: 7px;
       }
-    }
-  }
-  & .radio-input {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width:fit-content;
-    // justify-content: center;
-    & .input-label {
-      padding-left: 40px;
-    }
-    align-items: center;
-    & input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-    & .checkmark {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      // top: 0;
-      // left: 0;
-      height: 31px;
-      width: 31px;
-      background-color: #fff;
-      border-radius: 50%;
-      box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
-      @include tablet {
-        height: 25px;
-        width: 25px;
-      }
-    }
-    & .checkmark:after {
-      content: "";
-      position: absolute;
-      display: none;
-    }
-    
-  }
-  & .radio-input:hover input ~ .checkmark {
-    background-color: #e1ffe4;
-  }
-
-  // & .radio-input input
-
-  & .radio-input input:checked ~ .checkmark:after {
-    display: block;
-    // top: 9px;
-    // left: 9px;
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background: #FF843F;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-    @include tablet {
-      height: 15px;
-      width: 15px;
     }
   }
 }
